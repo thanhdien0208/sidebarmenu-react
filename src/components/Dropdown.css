@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+:root {
+    --bg: #060b26;
+    --bg-accent: #1b2246;
+    --text-color: #f5f5f5;
+    --nav-size: 60px;
+    --border: 1px solid #632ce4;
+    --border-radius: 8px;
+    --speed: 500ms;
+    --bg-btn: #632ce4;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    ;
+}
+
+.drop-item {
+    width: calc(var(--nav-size) * 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Icon Button */
+.icon-left {
+    --button-size: calc(var(--nav-size) * 0.5);
+    width: var(--button-size);
+    height: var(--button-size);
+    background-color: #484a4d;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: filter 300ms;
+    font-family: 'Lato', sans-serif;
+}
+
+.icon-left:hover {
+    filter: brightness(1.2);
+}
+
+.icon-left svg {
+    fill: var(--text-color);
+    width: 18px;
+    height: 18px;
+}
+
+
+/* Dropdown Menu */
+
+.dropdown {
+    position: absolute;
+    top: 58px;
+    width: 300px;
+    height: auto !important;
+    transform: translateX(45%);
+    background-color: var(--bg-accent);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    overflow: hidden;
+    transition: height var(--speed) ease;
+}
+
+.menu {
+    width: 100%;
+}
+
+.menu-item {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: var(--border-radius);
+    transition: background var(--speed);
+    padding: 0.5rem;
+    font-size: 15px;
+}
+
+.menu-item .icon-left {
+    margin-right: 0.5rem;
+}
+
+
+.menu-item .icon-left:hover {
+    filter: none;
+}
+
+.menu-item:hover {
+    background-color: var(--bg-btn);
+}
+
+
+/* CSSTransition classes  */
+.menu-primary-enter {
+    position: absolute;
+    transform: translateX(-110%);
+}
+
+.menu-primary-enter-active {
+    transform: translateX(0%);
+    transition: all var(--speed) ease;
+}
+
+.menu-primary-exit {
+    position: absolute;
+}
+
+.menu-primary-exit-active {
+    transform: translateX(-110%);
+    transition: all var(--speed) ease;
+}
+
+
+.menu-secondary-enter {
+    transform: translateX(110%);
+}
+
+.menu-secondary-enter-active {
+    transform: translateX(0%);
+    transition: all var(--speed) ease;
+}
+
+.menu-secondary-exit-active {
+    transform: translateX(110%);
+    transition: all var(--speed) ease;
+}
+
+/* @media screen and (max-width: 1024px) {
+    
+} */

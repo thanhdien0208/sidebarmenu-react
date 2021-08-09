@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+:root {
+    --bg: #060b26;
+    --bg-accent: #1b2246;
+    --text-color: #f5f5f5;
+    --nav-size: 60px;
+    --border: 1px solid #632ce4;
+    --border-radius: 8px;
+    --speed: 500ms;
+    --bg-btn: #632ce4;
+}
+
+.navbar {
+    background-color: var(--bg);
+    height: var(--nav-size);
+    border-bottom: var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    font-family: 'Lato', sans-serif;
+}
+
+.navbar-logo {
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -8px;
+}
+
+.user-profile {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-search {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 30px;
+    top: 18%;
+}
+
+.navbar-search-1 {
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 30px;
+    top: -50%;
+    transition: 850ms;
+}
+
+.navbar-search .search-box {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    outline: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-search .search-box:focus {
+    border: var(--border);
+}
+
+.navbar-search .btn-submit {
+    color: var(--bg-btn);
+    margin-left: 5px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--bg-btn);
+    background-color: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-search .btn-submit:hover {
+    color: var(--text-color);
+    border: 1px solid var(--bg-btn);
+    background-color: var(--bg-btn);
+}
+
+
+.menu-bars {
+    margin-left: 2rem;
+    font-size: 2rem;
+    background: none;
+}
+
+.nav-menu {
+    background-color: var(--bg);
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 850ms;
+    overflow: auto;
+}
+
+.nav-menu.active {
+    left: 0;
+    transition: 350ms;
+}
+
+.nav-menu-items {
+    width: 100%;
+}
+
+.nav-toggle {
+    background-color: var(--bg);
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+span {
+    margin-left: 16px;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .navbar-logo {
+        font-size: 1.5rem;
+    }
+
+    .user-profile {
+        font-size: 1.5rem;
+    }
+
+    .navbar-search {
+        position: absolute;
+        top: 0;
+        right: -100%;
+        transition: 850ms;
+    }
+
+    .navbar-search-1 {
+        font-size: 2rem;
+        position: absolute;
+        top: 30%;
+        right: 10%;
+        transition: 850ms;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-logo {
+        font-size: 1rem;
+    }
+
+    .user-profile {
+        font-size: 1.5rem;
+    }
+
+    .navbar-search {
+        position: absolute;
+        top: 0;
+        right: -100%;
+        transition: 850ms;
+    }
+
+    .navbar-search-1 {
+        position: absolute;
+        top: 30%;
+        right: 10%;
+        transition: 850ms;
+    }
+
+}
+
+@media screen and (max-width: 512px) {
+    .navbar-logo {
+        font-size: .9rem;
+    }
+
+    .user-profile {
+        font-size: 1rem;
+    }
+
+    .navbar-search {
+        position: absolute;
+        top: 0;
+        right: -100%;
+        transition: 850ms;
+    }
+
+    .navbar-search-1 {
+        font-size: 1.2rem;
+        position: absolute;
+        top: 40%;
+        right: 10%;
+        transition: 850ms;
+    }
+
+}
